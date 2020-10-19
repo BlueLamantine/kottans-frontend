@@ -1,1 +1,15 @@
-# kottans-frontend
+<h1 align="center">KOTTANS-FRONTEDN<br>COURSE</h1>
+
+|<img src="https://www.flaticon.com/svg/static/icons/svg/2560/2560505.svg" width = 180px>|<h1>[Kottans. IT community for cats/students/developers](https://kottans.org/)</h1>|
+|----- |----- |
+
+|[remote phase](https://github.com/kottans/frontend/tree/master/tasks)| topic | conspect (mindes about learning, short thesis) | sphere | screenshots |
+| ----- | ----- |----- |----- |----- |
+| [TASK 1](https://github.com/kottans/frontend/blob/master/tasks/git-intro.md) | Git and GitHub | Good tool for tracking changes in computer files and coordinating work with people. <ul><li>First of all introduce yourself to Git ```$ git config --global user.name```</li> <li> Create your repository ```$ git init``` and manage your files ```$ git add file.txt```</li> <li> Look after your files ```$ git status/log/diff/show``` Also be familiar with ```.git``` file</li> <li> Record your changes with  ```$ git commit```</li> <li> Mistakes happen, keep calm and ```$ git reset/rm/revert```</li> <li>Separate your workflow with ```$ git branch``` and ```$ git rebase``` The relation of branches can be shown by ```$ git log --oneline --decorate --graph --all```. If you get lost, you can always be found with ```$ git checkout master```</li></ul> ![](https://media.giphy.com/media/DJui9CAXFEgZa/giphy.gif)| version control system |[:camera:](#)|
+| |
+| [TASK 2](https://github.com/kottans/frontend/blob/master/tasks/linux-cli-http.md) | Linux, Command Line, HTTP Tools |----- | operation system |[:camera:](#) |
+| |
+| [TASK 3](https://github.com/kottans/frontend/blob/master/tasks/git-collaboration.md) | Git for Team Collaboration | Important thing - to collaborate with others developers using Github. And the remote repository is the solution! So in collaborating you need to create a new branch that has a descriptive name that describes what changes it contains. To manage your remote repo use commands ```$ git remote```, to send changes us ```$ git push``` and to to retrieve ```$ git fetch/pull ``` <ul>----->The git push command takes :<li>the shortname of the remote repository you want to send commits to </li> <li>the name of the branch that has the commits you want to send</li></ul><ul>----->When git pull is run, the following things happen : <li>the commit(s) on the remote branch are copied to the local repository</li> <li>the local tracking branch (origin/master) is moved to point to the most recent commit</li> <li>the local tracking branch (origin/master) is merged into the local branch (master)</li></ul> <ul>-----> When git fetch is run, the following things happen : <li>he commit(s) on the remote branch are copied to the local repository</li><li>the local tracking branch (e.g. origin/master) is moved to point to the most recent commit</li></ul>| web hosting service |[:camera:](#) |
+| |
+| || ![](https://media.giphy.com/media/l41lTQNDIqDVn1KCc/giphy.gif) | | |
+| |
