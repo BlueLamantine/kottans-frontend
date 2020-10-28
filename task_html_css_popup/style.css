@@ -95,7 +95,9 @@ a:focus,
   font-size: 14px;
   padding-top: 8px;
 }
-.popup-btn, 
+.popup-btn {
+  float: left;
+} 
 .kottans {
   grid-column-start: 1;
   grid-column-end: 3;
