@@ -58,6 +58,7 @@ const COFFEE = [
 
 const MENU = document.getElementById('mainMenu');
 const CUP = document.getElementById('coffeeCups');
+const ART = document.getElementById('articles');
 
 function render() {
     document.getElementById('topHeader').innerHTML =   `
@@ -65,15 +66,13 @@ function render() {
     `;   
     COFFEE.forEach(element => {
         MENU.appendChild(listNode(element));
-      //  let container = document.createElement('div');
         CUP.appendChild(cupNode(element));  
-        CUP.after(contentNode(element));
-
-    })
+        ART.appendChild(contentNode(element));
+    });
+    
     document.getElementById('mainFooter').innerHTML = `
     Made with &hearts; by <a href="#"> BlueLamantine </a> for <a href="#">Kottans</a>
     `
-    toggleMenu();
 };
 
 function listNode (el) {
@@ -143,8 +142,23 @@ function toggleContent(idEL, arr){
     removeHidden.hidden = false;
 }
 
+function responsiveMenu () {
+    document.getElementById('menu-btn').addEventListener('click', e => {
+        e.preventDefault(); 
+        e.target.classList.toggle("fa-bars");
+        e.target.classList.toggle("fa-times");
+        if (MENU.className === "menu") {
+            MENU.className += " responsive";
+          } else {
+            MENU.className = "menu";
+          }
+    });
+}
+
 document.addEventListener('DOMContentLoaded', ( load = () => {
     render();
+    toggleMenu();
+    responsiveMenu();
     document.removeEventListener('DOMContentLoaded', load);
   })
 );
