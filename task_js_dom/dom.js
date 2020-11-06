@@ -71,7 +71,7 @@ function render() {
 
     })
     document.getElementById('mainFooter').innerHTML = `
-    Made with &hearts; by <a href="#">BlueLamantine</a> for <a href="#">Kottans</a>
+    Made with &hearts; by <a href="#"> BlueLamantine </a> for <a href="#">Kottans</a>
     `
     toggleMenu();
 };

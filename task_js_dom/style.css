@@ -59,13 +59,16 @@ body {
   grid-gap: 10px;
   justify-content: center;
 }
+.menu-item a, .bottom-footer a {
+  text-decoration: none;
+}
 .menu-item a {
   font-size: 18px;
   line-height: 20px;
   display: grid;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
+  
   text-transform: uppercase;
   width: 200px;
   height: 100%;
@@ -124,4 +127,11 @@ body {
   font-weight: 400;
   font-style: italic;
   width: 500px;
+}
+.bottom-footer {
+  text-align: center;
+  color: #7f5f42;
+}
+.bottom-footer a {
+  color: #2e0e07;
 }
