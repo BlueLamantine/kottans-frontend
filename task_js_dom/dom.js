@@ -1,7 +1,7 @@
 const COFFEE = [
         { 
             title : 'Doppio',
-            id : 'droppio',
+            id : 'doppio',
             classes : {
                 bgColor : 'doppio-bg',
                 textColor : 'latte-text'
@@ -57,7 +57,7 @@ const COFFEE = [
 ];
 
 const MENU = document.getElementById('mainMenu');
-const CUP = document.getElementById('mainContent');
+const CUP = document.getElementById('coffeeCups');
 
 function render() {
     document.getElementById('topHeader').innerHTML =   `
@@ -66,7 +66,7 @@ function render() {
     COFFEE.forEach(element => {
         MENU.appendChild(listNode(element));
       //  let container = document.createElement('div');
-      //  CUP.appendChild(container);  
+        CUP.appendChild(cupNode(element));  
         CUP.after(contentNode(element));
 
     })
@@ -88,6 +88,20 @@ function listNode (el) {
     return listItem;
 };
 
+function cupNode (el) {
+    let cup = document.createElement('div');
+    cup.id = `${el.id}-cup`;
+    cup.className = `cup ${el.id}-cup__bg `;
+    if(!el.state){
+        cup.hidden = true;
+    }
+    cup.innerHTML = `
+        <div class = "paw-left"></div>
+        <div class = "paw-right"></div>
+    `;
+    return cup;
+}
+
 function contentNode (el) {
     const articleContent = document.createElement('article');
     const headerContent = document.createElement('h2');
@@ -105,6 +119,10 @@ function contentNode (el) {
 };
 
 function toggleMenu(){
+    const content = {
+        articles : [...document.getElementsByTagName('article')],
+        cups : [...document.getElementsByClassName('cup')]
+    }
     MENU.addEventListener('click', e => {
         e.preventDefault();    
         if (e.target.matches('.item__link')) {  
@@ -112,16 +130,16 @@ function toggleMenu(){
             const isActive = arrLi.find(li => li.classList.contains("active")); 
             isActive.classList.remove('active');
             e.target.parentNode.classList.add('active');
-            toggleContent(e.target.id);
+            toggleContent(e.target.id, content.cups);     
+            toggleContent(e.target.id, content.articles);
        }
     });
 };
 
-function toggleContent(el){
-    const articles = [...document.getElementsByTagName('article')];   
-    const setHidden = articles.find(ar => !ar.hasAttribute('hidden'));
+function toggleContent(idEL, arr){
+    const setHidden = arr.find(el => !el.hasAttribute('hidden'));
     setHidden.hidden = true;
-    const removeHidden = articles.find(ar => ar.id.indexOf(el) == 0);
+    const removeHidden = arr.find(el => el.id.indexOf(idEL) == 0);
     removeHidden.hidden = false;
 }
 
