@@ -53,13 +53,13 @@ const ART = document.getElementById('articles');
 
 function render() {
 	COFFEE.forEach(element => {
-		MENU.appendChild(listNode(element));
-		CUP.appendChild(cupNode(element));
-		ART.appendChild(contentNode(element));
+		MENU.appendChild(createListNode(element));
+		CUP.appendChild(createCupNode(element));
+		ART.appendChild(createContentNode(element));
 	});
 };
 
-function listNode(el) {
+function createListNode(el) {
 	let listItem = document.createElement('li');
 	listItem.className = `menu-item ${el.classes.bgColor}`;
 	listItem.innerHTML = `
@@ -71,7 +71,7 @@ function listNode(el) {
 	return listItem;
 };
 
-function cupNode(el) {
+function createCupNode(el) {
 	let cup = document.createElement('div');
 	cup.id = `${el.id}-cup`;
 	cup.className = `cup ${el.id}-cup__bg `;
@@ -83,9 +83,9 @@ function cupNode(el) {
         <div class = "paw-right"></div>
     `;
 	return cup;
-}
+};
 
-function contentNode(el) {
+function createContentNode(el) {
 	const articleContent = document.createElement('article');
 	const headerContent = document.createElement('h2');
 	const textContent = document.createElement('p');
@@ -124,7 +124,7 @@ function toggleContent(idEL, arr) {
 	setHidden.hidden = true;
 	const removeHidden = arr.find(el => el.id.indexOf(idEL) == 0);
 	removeHidden.hidden = false;
-}
+};
 
 function toggleMenu() {
 	document.getElementById('menu-btn').addEventListener('click', e => {
@@ -134,7 +134,7 @@ function toggleMenu() {
 		MENU.className === "menu" ? 
 		MENU.classList.add('responsive') : MENU.classList.remove('responsive');
 	});
-}
+};
 
 document.addEventListener('DOMContentLoaded', (load = () => {
 	render();
