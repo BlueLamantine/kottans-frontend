@@ -5,8 +5,7 @@ const COFFEE = [{
 		bgColor: 'doppio-bg',
 		textColor: 'latte-text'
 	},
-	paragraph: 'Double shot of espresso. Straight.',
-	state: true
+	paragraph: 'Double shot of espresso. Straight.'
 }, {
 	title: 'Americano',
 	id: 'americano',
@@ -66,7 +65,7 @@ function listNode(el) {
 	listItem.innerHTML = `
     <a href="#" id="${el.id}" class="item__link ${el.classes.textColor}">${el.title}</a>
     `;
-	if (el.state == true) {
+	if (el.id == 'doppio') {
 		listItem.classList.add('active');
 	}
 	return listItem;
@@ -76,7 +75,7 @@ function cupNode(el) {
 	let cup = document.createElement('div');
 	cup.id = `${el.id}-cup`;
 	cup.className = `cup ${el.id}-cup__bg `;
-	if (!el.state) {
+	if (el.id !== 'doppio') {
 		cup.hidden = true;
 	}
 	cup.innerHTML = `
@@ -92,7 +91,7 @@ function contentNode(el) {
 	const textContent = document.createElement('p');
 	articleContent.id = `${el.id}-article`;
 	articleContent.className = 'description';
-	if (!el.state) {
+	if (el.id !== 'doppio') {
 		articleContent.hidden = true;
 	}
 	headerContent.innerHTML = el.title;
