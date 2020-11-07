@@ -53,17 +53,11 @@ const CUP = document.getElementById('coffeeCups');
 const ART = document.getElementById('articles');
 
 function render() {
-	document.getElementById('topHeader').innerHTML = `
-    <h1 class="mainHeader">Cat & C<span class="o"></span>ffee</h1>
-    `;
 	COFFEE.forEach(element => {
 		MENU.appendChild(listNode(element));
 		CUP.appendChild(cupNode(element));
 		ART.appendChild(contentNode(element));
 	});
-	document.getElementById('mainFooter').innerHTML = `
-    Made with &hearts; by <a href="#"> BlueLamantine </a> for <a href="#">Kottans</a>
-    `
 };
 
 function listNode(el) {
