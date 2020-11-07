@@ -102,7 +102,7 @@ function contentNode(el) {
 	return articleContent;
 };
 
-function toggleMenu() {
+function toggleMenuItem() {
 	const content = {
 		articles: [...document.getElementsByTagName('article')],
 		cups: [...document.getElementsByClassName('cup')]
@@ -127,22 +127,19 @@ function toggleContent(idEL, arr) {
 	removeHidden.hidden = false;
 }
 
-function responsiveMenu() {
+function toggleMenu() {
 	document.getElementById('menu-btn').addEventListener('click', e => {
 		e.preventDefault();
 		e.target.classList.toggle("fa-bars");
 		e.target.classList.toggle("fa-times");
-		if (MENU.className === "menu") {
-			MENU.className += " responsive";
-		} else {
-			MENU.className = "menu";
-		}
+		MENU.className === "menu" ? 
+		MENU.classList.add('responsive') : MENU.classList.remove('responsive');
 	});
 }
 
 document.addEventListener('DOMContentLoaded', (load = () => {
 	render();
+	toggleMenuItem();
 	toggleMenu();
-	responsiveMenu();
 	document.removeEventListener('DOMContentLoaded', load);
 }));
