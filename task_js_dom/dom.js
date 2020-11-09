@@ -49,8 +49,6 @@ const COFFEE = [{
 }];
 const MENU = document.getElementById('mainMenu');
 const MAIN = document.getElementById('main-content');
-//const CUP = document.getElementById('coffeeCups');
-const ART = document.getElementById('articles');
 
 function render() {
 	
