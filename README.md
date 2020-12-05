@@ -23,5 +23,7 @@
 | |
 | [TASK 8](https://github.com/kottans/frontend/blob/master/tasks/js-dom.md) | Document Object Model | Working with the DOM is one of the most common tasks of client-side JavaScript. <br> ---> For more info [MDN DOM](https://developer.mozilla.org/ru/docs/DOM/DOM_Reference) <br> We must strive to minimize the operations of accessing the DOM tree : <ul><li>avoid to calls DOM elements inside loops</li><li>to assign references to DOM elements to local variables and work with these variables</li><li>use selector interface where possible</li><li>the value of the length property should be stored in a local variable when iterating through HTML collections</li></ul> ![](task_js_dom/screenshots/dom.gif) [DEMO](https://bluelamantine.github.io/kottans-frontend/task_js_dom/)| dom / PRACTICE | [:camera:](task_js_dom/screenshots)|
 | |
+| [TASK 9](https://github.com/kottans/frontend/blob/master/tasks/js-pre-oop.md) | Building a Tiny JS World | This is a [tiny task](https://github.com/OleksiyRudenko/a-tiny-JS-world) for those who are not familiar with Object-Oriented Programing concepts yet. And with JavaScript OOP in particular. | pre-oop / PRACTICE | [:camera:](https://bluelamantine.github.io/a-tiny-JS-world/)|
+| |
 | || ![](https://media.giphy.com/media/DJui9CAXFEgZa/giphy.gif) | | |
 | |
