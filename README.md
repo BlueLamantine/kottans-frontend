@@ -27,3 +27,5 @@
 | |
 | || ![](https://media.giphy.com/media/DJui9CAXFEgZa/giphy.gif) | | |
 | |
+|  [TASK 10](https://github.com/kottans/frontend/blob/master/tasks/js-oop.md) | Object-Oriented JavaScript | JavaScript gives us a built-in mechanism to share data across objects, called the ```prototype chain```. When we access a property on an object, it can fulfill that request by delegating to some other object. We can use that and change our factory function so that each object it creates contains only the data unique to that particular object, and delegate all other property requests to a single, shared object. ALWAYS define methods on the prototype. To define methods use ```YourClass.prototype.yourMethod``` [DEMO](https://bluelamantine.github.io/kottans-nanodegree-arcade-game/)| oop / PRACTICE | [:camera:](task_js_oop/README.md)|
+| |
