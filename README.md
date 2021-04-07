@@ -33,3 +33,5 @@
 | |
 |  [TASK 12](https://github.com/kottans/frontend/blob/master/tasks/memory-pair-game.md) | Memory – Pair Game | ![](task_memory_game/game.gif) [DEMO](https://bluelamantine.github.io/kottans-memory-pair-game/) [CODE](https://github.com/BlueLamantine/kottans-memory-pair-game) | PRACTICE | [:camera:](https://github.com/BlueLamantine/kottans-memory-pair-game)|
 | |
+|  [TASK 13](https://github.com/kottans/frontend/blob/master/tasks/friends-app.md) | Community App(Friends App) |[DEMO](https://bluelamantine.github.io/kottans-community-app/) [CODE](https://github.com/BlueLamantine/kottans-community-app) | PRACTICE | [:camera:]()|
+| |
